@@ -1,0 +1,187 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title:  HappySnail 幸福的蜗牛 | 热爱可低岁月漫长
+subtitle: 热爱可低岁月漫长
+name: HappySnail幸福的蜗牛
+email: 1367623781@qq.com
+description: 沉淀、分享、成长，专注于原创专题案例，以最易学习编程的方式分享知识，让自己和他人都能有所收获。目前已完成的专题有；Netty4.x实战专题案例、用Java实现JVM、基于JavaAgent的全链路监控、手写RPC框架、DDD专题案例等。
+keywords: Java,程序人生,程序员,Web
+encoding: "utf-8"
+favicon: favicon.ico 
+
+repository: HappySnailSunshine/HappySnailSunshine.github.io
+github_url: https://github.com/HappySnailSunshine
+url: https://happysnail.cn/
+enforce_ssl: happysnail.cn
+
+## Gem
+plugins:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
+
+kramdown:
+  input: GFM
+  enable_coderay: true
+  syntax_highlighter: rouge
+
+syntax_highlighter_opts:
+   coderay_line_numbers:  nil
+
+# Pagination
+paginate: 12
+paginate_path: 'page:num'
+
+# Navigation. top menu list 导航 顶部菜单列表
+menus:
+
+  -
+    href: /open-source.html
+    label: Open-Source
+    target: _self
+
+  -
+    href: https://happysnailsunshine.gitee.io/javainterview
+    label: JavaInterview
+    target: _self
+
+  -
+    href: /open-source.html
+    label: Git
+    target: _self
+
+  -
+    href: /link.html
+    label: 友链
+    target: _self
+
+  -
+    href: /about.html
+    label: 关于
+    target: _self
+
+
+# Navigation. main menu list
+navs:
+
+  -
+    href: /
+    label: 首页
+
+  - href: https://happysnailsunshine.gitee.io/javainterview
+    label: JavaInterview
+    target: _self
+    subnav:
+      - subHref: /itstack-demo-springcloud/itstack-demo-springcloud.html
+        subLabel: Spring Cloud
+
+  - href: /
+    label: Spring
+    target: _self
+    subnav:
+      - subHref: /itstack-demo-springcloud/itstack-demo-springcloud.html
+        subLabel: Spring Cloud
+
+  - href: /
+    label: Activiti
+    target: _self
+    subnav:
+      - subHref: /itstack-demo-springcloud/itstack-demo-springcloud.html
+        subLabel: Activiti基础
+  -
+    href: /archives.html
+    label: Archives
+    target: _self
+
+# labels. my blog key words
+labels:
+
+  -
+    href: /open-source.html
+    label: Git仓库
+    target: _blank
+  -
+    href: /gitchat.html
+    label: GitChat
+    target: _blank
+
+# selected articles 精选文章
+classes:
+
+  -
+    href: /itstack-demo-netty/itstack-demo-netty.html
+    name: Netty4.x专题案例
+    describe: 跟着案例学Netty，Netty4.x案例从简单入门到应用实战，全篇35节优秀案例+实战源码[基础篇(13)、中级篇(13)、高级篇(3章+)、源码分析篇]。
+
+  -
+    href: /itstack-demo-jvm/itstack-demo-jvm.html
+    name: 用Java实现JVM虚拟机
+    describe: 本专题通过Java代码来实现JVM的基础功能（搜索解析class文件、字节码命令、运行时数据区等），从而让java程序员通过最熟知的java程序，学习JVM是如何将java程序一步步跑起来的。
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 6 # Number of repos to show
+
+# Google Analytics
+# analytics :
+# provider : google
+#   google :
+#     tracking_id : ''  # ex. UA-72165600-X
+
+
+# For about.html. Fell free to create your own!
+skill_software_keywords: [Java, MySQL, Oracle, Design Patterns]
+skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, NodeJS, ExpressJS, MongoDB, Redis, PHP,  Boostrap]
+skill_mobile_app_keywords: [vuejs, hyhird app]
+
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+  username: HappySnailSunshine
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+  owner: HappySnailSunshine
+  repo: HappySnailSunshine.github.io
+  oauth:
+    client_id: df8beab2190bec20352a
+    client_secret: 7eeeb4369d699c933f02a026ae8bb1e2a9c80e90
+# https://github.com/gitalk/gitalk#install
+gitalk:
+  owner: HappySnailSunshine
+  repo: HappySnailSunshine.github.io
+  clientID: df8beab2190bec20352a
+  clientSecret: 7eeeb4369d699c933f02a026ae8bb1e2a9c80e90
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : true
